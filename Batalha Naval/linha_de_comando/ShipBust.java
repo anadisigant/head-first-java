@@ -4,15 +4,15 @@ public class ShipBust {
     public static void main(String[] args) {
         int numOfGuesses = 0;
         GameHelper helper = new GameHelper();
-        Ship theShip = new Ship();
+        SimpleShip theSimpleShip = new SimpleShip();
         int randomNum = (int) (Math.random() * 5);
         int[] locations = {randomNum, randomNum + 1, randomNum + 2};
-        theShip.setLocationCells(locations);
+        theSimpleShip.setLocationCells(locations);
         boolean isAlive = true;
 
         while (isAlive == true) {
             String guess = helper.getUserInput("Insira um número");
-            String result = theShip.checkYourself(guess);
+            String result = theSimpleShip.checkYourself(guess);
             numOfGuesses++;
             if (result.equals("kill")) {
                 isAlive = false;
