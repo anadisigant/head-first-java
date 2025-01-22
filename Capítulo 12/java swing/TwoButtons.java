@@ -35,13 +35,13 @@ public class TwoButtons {
 
     class LabelListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            label.setText("Ouch!");  // Altera o texto do label ao clicar no botão
+            label.setText("Ouch!");  
         }
     }
 
     class ColorListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            frame.repaint();  // Rechama paintComponent em MyDrawPanel
+            frame.repaint(); 
         }
     }
 }
@@ -51,6 +51,6 @@ class MyDrawPanel extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         Color randomColor = new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255));
         g2d.setColor(randomColor);
-        g2d.fillOval(70, 70, 100, 100);  // Desenha um círculo com cor aleatória
+        g2d.fillOval(70, 70, 100, 100);  
     }
 }
